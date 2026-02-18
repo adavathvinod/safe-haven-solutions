@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
 import { Phone } from "lucide-react";
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
-import hero4 from "@/assets/hero-4.jpg";
+import slide1 from "@/assets/slide-1.png";
+import slide2 from "@/assets/slide-2.png";
+import slide3 from "@/assets/slide-3.png";
+import slide4 from "@/assets/slide-4.png";
+import slide5 from "@/assets/slide-5.png";
+import slide6 from "@/assets/slide-6.png";
 
 const slides = [
-  { image: hero1, title: "GDR Enterprise Safety Nets", discount: "40% OFF*" },
-  { image: hero2, title: "Children Safety Nets", discount: "40% OFF*" },
-  { image: hero3, title: "Invisible Grill for Balcony", discount: "40% OFF*" },
-  { image: hero4, title: "Pigeon Safety Nets", discount: "40% OFF*" },
+  { image: slide1, title: "GDR Enterprise Safety Nets", discount: "40% OFF*" },
+  { image: slide2, title: "Invisible Grill for Balcony", discount: "40% OFF*" },
+  { image: slide3, title: "Balcony Safety Nets", discount: "40% OFF*" },
+  { image: slide4, title: "Children Safety Nets", discount: "40% OFF*" },
+  { image: slide5, title: "Pigeon & Bird Spikes", discount: "40% OFF*" },
+  { image: slide6, title: "Pigeon Safety Nets", discount: "40% OFF*" },
 ];
 
 const HeroSlider = () => {

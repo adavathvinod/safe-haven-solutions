@@ -1,6 +1,8 @@
 import { Phone } from "lucide-react";
-import hero1 from "@/assets/hero-1.jpg";
-import hero3 from "@/assets/hero-3.jpg";
+import about1 from "@/assets/about-1.png";
+import about2 from "@/assets/about-2.png";
+import slide1 from "@/assets/slide-2.png";
+import slide3 from "@/assets/slide-3.png";
 
 const AboutSection = () => {
   return (
@@ -29,9 +31,10 @@ const AboutSection = () => {
           </a>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <img src={hero1} alt="Safety net installation" className="rounded-lg w-full h-48 object-cover" />
-          <img src={hero3} alt="Invisible grill" className="rounded-lg w-full h-48 object-cover" />
-          <img src={hero1} alt="Balcony nets" className="rounded-lg w-full h-48 object-cover col-span-2" />
+          <img src={about1} alt="Invisible grill installation" className="rounded-lg w-full h-48 object-cover" />
+          <img src={slide1} alt="Balcony safety nets" className="rounded-lg w-full h-48 object-cover" />
+          <img src={slide3} alt="Safety net close up" className="rounded-lg w-full h-48 object-cover" />
+          <img src={about2} alt="Balcony grill view" className="rounded-lg w-full h-48 object-cover" />
         </div>
       </div>
     </section>
