@@ -3,6 +3,7 @@ import HeroSlider from "@/components/HeroSlider";
 import EnquiryForm from "@/components/EnquiryForm";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import RecentWorks from "@/components/RecentWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
@@ -16,6 +17,7 @@ const Index = () => {
       <EnquiryForm />
       <AboutSection />
       <ServicesSection />
+      <RecentWorks />
       <WhyChooseUs />
       <Testimonials />
       <Footer />
