@@ -35,7 +35,7 @@ const RecentWorks = () => {
   const getVisibleSlides = () => {
     const slides = [];
     for (let i = 0; i < visibleCount; i++) {
-      slides.push(works[(current + i) % works.length]);
+      slides.push({ ...works[(current + i) % works.length], index: (current + i) % works.length });
     }
     return slides;
   };
@@ -59,8 +59,8 @@ const RecentWorks = () => {
           </button>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-8">
-            {getVisibleSlides().map((work, i) => (
-              <div key={`${current}-${i}`} className="rounded-xl overflow-hidden shadow-lg group">
+            {getVisibleSlides().map((work) => (
+              <div key={work.index} className="rounded-xl overflow-hidden shadow-lg group animate-fade-in">
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={work.image}
@@ -81,18 +81,6 @@ const RecentWorks = () => {
           >
             <ChevronRight className="w-6 h-6" />
           </button>
-        </div>
-
-        <div className="flex justify-center gap-2 mt-6">
-          {works.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                i === current ? "bg-secondary scale-125" : "bg-muted-foreground/30"
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>
