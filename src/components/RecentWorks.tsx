@@ -28,7 +28,7 @@ const RecentWorks = () => {
   const prev = () => setCurrent((prev) => (prev - 1 + works.length) % works.length);
 
   useEffect(() => {
-    const timer = setInterval(next, 3000);
+    const timer = setInterval(next, 6000);
     return () => clearInterval(timer);
   }, []);
 
