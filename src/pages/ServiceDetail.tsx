@@ -12,6 +12,10 @@ import pageConstruction from "@/assets/page-construction.jpg";
 import pageDuct from "@/assets/page-duct.jpg";
 import pageIndustrial from "@/assets/page-industrial.jpg";
 import pagePool from "@/assets/page-pool.jpg";
+import pageAntibird from "@/assets/page-antibird.jpg";
+import pagePigeon from "@/assets/page-pigeon.jpg";
+import pageBirdprotection from "@/assets/page-birdprotection.jpg";
+import pageSpikes from "@/assets/page-spikes.jpg";
 
 interface ServiceData {
   title: string;
@@ -95,6 +99,42 @@ const servicesData: Record<string, ServiceData> = {
     features: ["Waterproof nylon nets", "Strong load capacity", "UV resistant", "Easy open and close system", "Custom fit design"],
     applications: ["Residential swimming pools", "Hotels", "Resorts", "Schools", "Clubs"],
     benefits: ["Life-saving protection", "Peace of mind", "Keeps pool clean", "Stylish and safe solution"],
+  },
+  "anti-bird-nets": {
+    title: "Anti Bird Nets",
+    image: pageAntibird,
+    description: "Anti Bird Nets are specially designed to prevent birds from entering balconies, windows, and open spaces without harming them. They are a humane and eco-friendly solution for bird control in residential and commercial areas.",
+    purpose: ["Stop birds from entering balconies and buildings", "Prevent nesting and droppings", "Protect property and cleanliness"],
+    features: ["Made from high-quality nylon or HDPE material", "UV stabilized and weather resistant", "Strong and durable mesh", "Transparent or white color for neat appearance", "Long-lasting (3–5 years)"],
+    applications: ["Balconies", "Windows", "Terraces", "Warehouses", "Factories"],
+    benefits: ["Hygienic environment", "No harm to birds", "Maintains airflow and sunlight", "Easy installation and maintenance", "Cost-effective solution"],
+  },
+  "pigeon-safety-nets": {
+    title: "Pigeon Safety Nets",
+    image: pagePigeon,
+    description: "Pigeon Safety Nets are used specifically to block pigeons from entering buildings and causing health hazards. They are widely installed in apartments and commercial buildings.",
+    purpose: ["Prevent pigeon nesting", "Stop pigeon droppings", "Avoid spread of diseases", "Protect walls and interiors"],
+    features: ["Heavy-duty nylon netting", "Small mesh size to block pigeons", "UV and heat resistant", "Strong knots and long durability", "Almost invisible look"],
+    applications: ["Apartment balconies", "Window grills", "AC outdoor units", "Parking areas", "Hospitals and schools"],
+    benefits: ["Clean and healthy surroundings", "No bird injuries", "Long service life", "Easy to clean", "Professional appearance"],
+  },
+  "bird-protection-nets": {
+    title: "Bird Protection Nets",
+    image: pageBirdprotection,
+    description: "Bird Protection Nets are used to protect crops, plants, fruits, and open areas from bird damage. They are widely used in agriculture and gardens.",
+    purpose: ["Protect fruits and vegetables", "Prevent birds from damaging plants", "Avoid crop loss", "Maintain garden beauty"],
+    features: ["Lightweight and strong material", "UV protected", "Tear resistant", "Flexible installation", "Reusable nets"],
+    applications: ["Farms", "Gardens", "Nurseries", "Vineyards", "Greenhouses"],
+    benefits: ["Safe for birds", "Increases crop yield", "Eco-friendly solution", "Easy installation", "Affordable protection"],
+  },
+  "pigeon-bird-spikes": {
+    title: "Pigeon & Bird Spikes",
+    image: pageSpikes,
+    description: "Pigeon & Bird Spikes are physical bird deterrents installed on ledges, parapets, signboards, and beams to stop birds from sitting or nesting.",
+    purpose: ["Prevent birds from landing", "Stop nesting on edges", "Keep buildings clean", "Protect property"],
+    features: ["Stainless steel or plastic spikes", "Rust-proof and weather resistant", "Long-lasting material", "Easy installation with adhesive or screws", "Non-harmful design"],
+    applications: ["Window ledges", "Building edges", "Roofs", "Signboards", "CCTV poles"],
+    benefits: ["Humane bird control", "Low maintenance", "Durable and strong", "Professional look", "Effective bird deterrent"],
   },
 };
 

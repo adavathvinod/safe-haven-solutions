@@ -14,10 +14,10 @@ const safetyNetChildren = [
 ];
 
 const birdNetChildren = [
-  { label: "Anti Bird Nets", slug: "" },
-  { label: "Pigeon Safety Nets", slug: "" },
-  { label: "Bird Protection Nets", slug: "" },
-  { label: "Pigeon & Bird Spikes", slug: "" },
+  { label: "Anti Bird Nets", slug: "anti-bird-nets" },
+  { label: "Pigeon Safety Nets", slug: "pigeon-safety-nets" },
+  { label: "Bird Protection Nets", slug: "bird-protection-nets" },
+  { label: "Pigeon & Bird Spikes", slug: "pigeon-bird-spikes" },
 ];
 
 const navItems = [
