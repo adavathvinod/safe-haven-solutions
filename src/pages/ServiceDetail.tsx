@@ -16,6 +16,11 @@ import pageAntibird from "@/assets/page-antibird.jpg";
 import pagePigeon from "@/assets/page-pigeon.jpg";
 import pageBirdprotection from "@/assets/page-birdprotection.jpg";
 import pageSpikes from "@/assets/page-spikes.jpg";
+import pageSports from "@/assets/page-sports.jpg";
+import pageCricket from "@/assets/page-cricket.jpg";
+import pageFootball from "@/assets/page-football.jpg";
+import pageTennis from "@/assets/page-tennis.jpg";
+import pageMultisport from "@/assets/page-multisport.jpg";
 
 interface ServiceData {
   title: string;
@@ -135,6 +140,51 @@ const servicesData: Record<string, ServiceData> = {
     features: ["Stainless steel or plastic spikes", "Rust-proof and weather resistant", "Long-lasting material", "Easy installation with adhesive or screws", "Non-harmful design"],
     applications: ["Window ledges", "Building edges", "Roofs", "Signboards", "CCTV poles"],
     benefits: ["Humane bird control", "Low maintenance", "Durable and strong", "Professional look", "Effective bird deterrent"],
+  },
+  "sports-safety-nets": {
+    title: "Sports Safety Nets",
+    image: pageSports,
+    description: "Sports Safety Nets are specially designed to protect players, spectators, and surrounding property during sports activities. These nets help prevent balls from going out of the playing area and reduce the risk of injuries or damage.",
+    purpose: ["Prevent balls from leaving the playing area", "Protect players and spectators", "Avoid damage to nearby property", "Maintain discipline and safety in sports zones"],
+    features: ["Made from high-quality nylon or HDPE material", "High tensile strength and shock absorption", "UV resistant and weatherproof", "Tear-resistant and long-lasting", "Available in different mesh sizes and thickness", "Custom-made according to ground size"],
+    applications: ["Cricket grounds", "Football grounds", "Tennis courts", "Badminton courts", "Basketball courts", "Volleyball courts", "Schools and colleges", "Indoor and outdoor sports arenas"],
+    benefits: ["Ensures player safety", "Prevents ball loss", "Protects nearby buildings and vehicles", "Improves game discipline", "Cost-effective safety solution", "Easy installation and maintenance"],
+  },
+  "cricket-practice-nets": {
+    title: "Cricket Practice Nets",
+    image: pageCricket,
+    description: "Cricket Practice Nets are used for safe and professional cricket training. They help players practice batting and bowling without risk of injury or ball loss.",
+    purpose: ["Safe cricket training", "Prevent balls from going outside", "Protect players and coaches"],
+    features: ["Heavy-duty net material", "Strong knots and mesh", "Weather-resistant", "Long-lasting", "Available in standard and custom sizes"],
+    applications: ["Cricket academies", "Schools and colleges", "Sports clubs", "Residential grounds"],
+    benefits: ["Improves practice quality", "Safe environment", "Durable and reliable", "Professional training setup"],
+  },
+  "football-ground-nets": {
+    title: "Football Ground Nets",
+    image: pageFootball,
+    description: "Football Ground Nets are installed around football fields to stop balls from going outside and ensure safety for spectators and nearby areas.",
+    purpose: ["Keep football within ground", "Protect public areas", "Prevent accidents"],
+    features: ["Strong nylon nets", "UV protected", "High impact resistance", "Weatherproof", "Easy installation"],
+    applications: ["Football stadiums", "Schools", "Sports complexes", "Community playgrounds"],
+    benefits: ["Better game control", "Reduced ball loss", "Safe surroundings", "Long service life"],
+  },
+  "tennis-court-nets": {
+    title: "Tennis Court Nets",
+    image: pageTennis,
+    description: "Tennis Court Nets are used for professional and recreational tennis courts to ensure safety and proper play area management.",
+    purpose: ["Safe tennis play", "Prevent balls from entering public areas", "Improve court discipline"],
+    features: ["High-quality net material", "Strong and flexible", "Weather resistant", "Standard and customized sizes", "Long durability"],
+    applications: ["Tennis courts", "Sports clubs", "Schools", "Hotels and resorts"],
+    benefits: ["Professional appearance", "Player safety", "Easy maintenance", "Long-lasting performance"],
+  },
+  "multi-sport-safety-nets": {
+    title: "Multi-Sport Safety Nets",
+    image: pageMultisport,
+    description: "Multi-Sport Safety Nets are designed for grounds where multiple sports are played such as cricket, football, volleyball, and badminton.",
+    purpose: ["Provide safety for different sports", "Separate play zones", "Avoid cross-ball interference"],
+    features: ["Heavy-duty nets", "Custom size installation", "Weather and UV resistant", "High impact strength"],
+    applications: ["Sports academies", "Indoor stadiums", "Outdoor playgrounds", "Schools and colleges"],
+    benefits: ["Versatile use", "Enhanced safety", "Cost-effective", "Professional sports setup"],
   },
 };
 

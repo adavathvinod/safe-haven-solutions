@@ -20,14 +20,22 @@ const birdNetChildren = [
   { label: "Pigeon & Bird Spikes", slug: "pigeon-bird-spikes" },
 ];
 
+const sportsNetChildren = [
+  { label: "Sports Safety Nets", slug: "sports-safety-nets" },
+  { label: "Cricket Practice Nets", slug: "cricket-practice-nets" },
+  { label: "Football Ground Nets", slug: "football-ground-nets" },
+  { label: "Tennis Court Nets", slug: "tennis-court-nets" },
+  { label: "Multi-Sport Safety Nets", slug: "multi-sport-safety-nets" },
+];
+
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/#about" },
   { label: "Safety Nets", href: "/#services", children: safetyNetChildren },
   { label: "Bird Nets", href: "/#services", children: birdNetChildren },
-  { label: "Sports Nets", href: "/#services" },
-  { label: "Gallery", href: "/#gallery" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Sports Nets", href: "/#services", children: sportsNetChildren },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const Header = () => {
@@ -57,13 +65,23 @@ const Header = () => {
               onMouseEnter={() => item.children && setOpenDropdown(item.label)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              <a
-                href={item.href}
-                className="flex items-center gap-1 px-3 py-2 text-sm font-semibold font-heading text-primary hover:text-secondary transition-colors"
-              >
-                {item.label}
-                {item.children && <ChevronDown className="w-3 h-3" />}
-              </a>
+              {item.href.startsWith("/#") ? (
+                <a
+                  href={item.href}
+                  className="flex items-center gap-1 px-3 py-2 text-sm font-semibold font-heading text-primary hover:text-secondary transition-colors"
+                >
+                  {item.label}
+                  {item.children && <ChevronDown className="w-3 h-3" />}
+                </a>
+              ) : (
+                <Link
+                  to={item.href}
+                  className="flex items-center gap-1 px-3 py-2 text-sm font-semibold font-heading text-primary hover:text-secondary transition-colors"
+                >
+                  {item.label}
+                  {item.children && <ChevronDown className="w-3 h-3" />}
+                </Link>
+              )}
               {item.children && openDropdown === item.label && (
                 <div className="absolute top-full left-0 bg-background shadow-lg rounded-md py-2 min-w-[220px] border border-border z-50">
                   {item.children.map((child) => (
@@ -113,13 +131,23 @@ const Header = () => {
         <nav className="lg:hidden border-t border-border bg-background pb-4">
           {navItems.map((item) => (
             <div key={item.label}>
-              <a
-                href={item.href}
-                className="block px-6 py-3 text-sm font-semibold text-primary hover:bg-accent transition-colors"
-                onClick={() => !item.children && setMobileOpen(false)}
-              >
-                {item.label}
-              </a>
+              {item.href.startsWith("/#") ? (
+                <a
+                  href={item.href}
+                  className="block px-6 py-3 text-sm font-semibold text-primary hover:bg-accent transition-colors"
+                  onClick={() => !item.children && setMobileOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  to={item.href}
+                  className="block px-6 py-3 text-sm font-semibold text-primary hover:bg-accent transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )}
               {item.children && item.children.map((child) => (
                 child.slug ? (
                   <Link
