@@ -3,6 +3,7 @@ import HeroSlider from "@/components/HeroSlider";
 import EnquiryForm from "@/components/EnquiryForm";
 import RecentWorks from "@/components/RecentWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import ThreeSteps from "@/components/ThreeSteps";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 
@@ -14,6 +15,7 @@ const Index = () => {
       <EnquiryForm />
       <RecentWorks />
       <WhyChooseUs />
+      <ThreeSteps />
       <Footer />
       <FloatingButtons />
     </div>

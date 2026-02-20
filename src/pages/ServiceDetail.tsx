@@ -3,6 +3,7 @@ import { Phone, ArrowLeft, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import ThreeSteps from "@/components/ThreeSteps";
 
 import pageBalcony from "@/assets/page-balcony.jpg";
 import pageBuilding from "@/assets/page-building.jpg";
@@ -271,6 +272,7 @@ const ServiceDetail = () => {
         </div>
       </section>
 
+      <ThreeSteps />
       <Footer />
       <FloatingButtons />
     </div>

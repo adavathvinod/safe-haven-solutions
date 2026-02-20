@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import ServicesSection from "@/components/ServicesSection";
+import ThreeSteps from "@/components/ThreeSteps";
 
 const Services = () => {
   return (
@@ -19,6 +20,7 @@ const Services = () => {
       </div>
 
       <ServicesSection />
+      <ThreeSteps />
 
       <Footer />
       <FloatingButtons />
