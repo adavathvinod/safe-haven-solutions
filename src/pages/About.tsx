@@ -4,6 +4,7 @@ import FloatingButtons from "@/components/FloatingButtons";
 import AboutSection from "@/components/AboutSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
+import ThreeSteps from "@/components/ThreeSteps";
 
 const About = () => {
   return (
@@ -23,6 +24,7 @@ const About = () => {
       <AboutSection />
       <WhyChooseUs />
       <Testimonials />
+      <ThreeSteps />
 
       <Footer />
       <FloatingButtons />
