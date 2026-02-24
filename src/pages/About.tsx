@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
@@ -9,6 +10,11 @@ import ThreeSteps from "@/components/ThreeSteps";
 const About = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About GDR Enterprises - Leading Safety Net Company in Hyderabad"
+        description="Learn about GDR Enterprises, the trusted safety nets provider in Hyderabad, Vijayawada & Visakhapatnam. 10+ years experience, 5000+ installations."
+        keywords="about GDR Enterprises, safety nets company Hyderabad, bird nets company, safety net installation"
+      />
       <Header />
 
       {/* Page Banner */}

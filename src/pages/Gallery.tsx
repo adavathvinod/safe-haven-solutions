@@ -1,3 +1,4 @@
+import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
@@ -24,6 +25,11 @@ const galleryImages = [
 const Gallery = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Gallery - Safety Net Installations | GDR Enterprises"
+        description="View our recent safety net installations in Hyderabad, Vijayawada & Visakhapatnam. Balcony nets, bird nets, building safety nets gallery."
+        keywords="safety net installation gallery, balcony nets photos, bird nets images, pigeon nets work"
+      />
       <Header />
 
       {/* Page Banner */}
