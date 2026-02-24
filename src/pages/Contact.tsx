@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send, Clock } from "lucide-react";
+import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
@@ -21,6 +22,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact GDR Enterprises - Free Quote for Safety Nets"
+        description="Contact GDR Enterprises for free safety net quotes. Call 9100579116. We serve Hyderabad, Vijayawada & Visakhapatnam. Mon-Sat 8AM-8PM."
+        keywords="contact safety nets Hyderabad, safety nets quote, bird nets enquiry, GDR Enterprises contact"
+      />
       <Header />
 
       {/* Page Banner */}

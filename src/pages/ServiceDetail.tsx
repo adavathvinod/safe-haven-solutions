@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { Phone, ArrowLeft, CheckCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
@@ -222,6 +223,11 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title={`${service.title} in Hyderabad | GDR Enterprises`}
+        description={service.description.slice(0, 155)}
+        keywords={`${service.title}, ${service.title} Hyderabad, safety nets, GDR Enterprises`}
+      />
       <Header />
       
       {/* Hero Banner */}
