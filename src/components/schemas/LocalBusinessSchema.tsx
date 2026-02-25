@@ -15,7 +15,7 @@ const LocalBusinessSchema = () => {
     telephone: `+91${PHONE_1}`,
     paymentAccepted: PAYMENT_METHODS.join(", "),
     currenciesAccepted: "INR",
-    email: "info@gdr-enterprises.com",
+    email: "gdrenterprisesasafetynets@gmail.com",
     foundingDate: "2010",
     address: {
       "@type": "PostalAddress",

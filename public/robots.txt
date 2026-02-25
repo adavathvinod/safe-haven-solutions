@@ -38,8 +38,8 @@ User-agent: Pinterest
 Allow: /
 
 # Sitemap locations
-Sitemap: https://gdr-enterprises.com/sitemap.xml
-Sitemap: https://gdr-enterprises.com/sitemap-images.xml
+Sitemap: https://gdrenterprises.in/sitemap.xml
+Sitemap: https://gdrenterprises.in/sitemap-images.xml
 
 # Host preference
-Host: https://gdr-enterprises.com
+Host: https://gdrenterprises.in

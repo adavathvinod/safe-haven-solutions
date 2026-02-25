@@ -1,6 +1,6 @@
 import { BUSINESS_NAME, PHONE_1, PHONE_2, LOCATION, ADDRESS } from "./constants";
 
-export const SITE_URL = "https://gdr-enterprises.com";
+export const SITE_URL = "https://gdrenterprises.in";
 
 // Service Areas for Local SEO
 export const SERVICE_AREAS = [

@@ -8,7 +8,7 @@ export interface SitemapUrl {
   priority: number;
 }
 
-const SITE_URL = "https://gdr-enterprises.com";
+const SITE_URL = "https://gdrenterprises.in";
 const TODAY = new Date().toISOString().split("T")[0];
 
 export const generateSitemap = (): SitemapUrl[] => {
