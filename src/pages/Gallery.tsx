@@ -26,9 +26,9 @@ const Gallery = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Gallery - Safety Net Installations | GDR Enterprises"
-        description="View our recent safety net installations in Hyderabad, Vijayawada & Visakhapatnam. Balcony nets, bird nets, building safety nets gallery."
-        keywords="safety net installation gallery, balcony nets photos, bird nets images, pigeon nets work"
+        title="Safety Net Installation Gallery | Real Project Photos | GDR Enterprises Hyderabad"
+        description="View our portfolio of 5000+ safety net installations in Hyderabad, Vijayawada & Visakhapatnam. Balcony nets, bird nets, sports nets, building protection - real project gallery."
+        keywords="safety net installation gallery, balcony nets photos, bird nets images, pigeon nets work, safety net projects Hyderabad, construction safety net photos, sports net installation gallery"
       />
       <Header />
 

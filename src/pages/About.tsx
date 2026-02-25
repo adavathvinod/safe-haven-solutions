@@ -11,9 +11,9 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="About GDR Enterprises - Leading Safety Net Company in Hyderabad"
-        description="Learn about GDR Enterprises, the trusted safety nets provider in Hyderabad, Vijayawada & Visakhapatnam. 10+ years experience, 5000+ installations."
-        keywords="about GDR Enterprises, safety nets company Hyderabad, bird nets company, safety net installation"
+        title="About GDR Enterprises - Premier Safety Nets Company in Hyderabad | 10+ Years Experience"
+        description="Discover GDR Enterprises - Hyderabad's trusted safety nets provider with 10+ years experience, 5000+ installations, expert team. Balcony nets, bird nets, stadium nets - all solutions!"
+        keywords="about GDR Enterprises, best safety nets company Hyderabad, professional bird nets provider, safety net installation experts, Hyderabad safety solutions, experienced safety net installers"
       />
       <Header />
 

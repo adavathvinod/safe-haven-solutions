@@ -1,6 +1,9 @@
 import { useParams, Link } from "react-router-dom";
-import { Phone, ArrowLeft, CheckCircle } from "lucide-react";
+import { Phone, ArrowLeft, CheckCircle, Star } from "lucide-react";
 import SEO from "@/components/SEO";
+import ServiceSchema from "@/components/schemas/ServiceSchema";
+import BreadcrumbSchema from "@/components/schemas/BreadcrumbSchema";
+import FAQSchema from "@/components/schemas/FAQSchema";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
@@ -26,168 +29,173 @@ import pageMultisport from "@/assets/page-multisport.jpg";
 
 interface ServiceData {
   title: string;
+  seoTitle: string;
+  seoDescription: string;
+  seoKeywords: string;
   image: string;
   description: string;
+  fullDescription: string;
   purpose: string[];
   features: string[];
   applications: string[];
   benefits: string[];
+  faqs?: Array<{ q: string; a: string }>;
 }
 
 const servicesData: Record<string, ServiceData> = {
   "balcony-safety-nets": {
     title: "Balcony Safety Nets",
+    seoTitle: "Balcony Safety Nets Installation in Hyderabad | Child Protection | GDR Enterprises",
+    seoDescription: "Professional balcony safety nets in Hyderabad for child protection, pet safety, and bird prevention. UV-resistant, long-lasting nets. Free quote. Call 9100579116.",
+    seoKeywords: "balcony safety nets Hyderabad, balcony nets installation, child safety nets, bird nets for balcony, pigeon prevention nets, invisible grills",
     image: pageBalcony,
     description: "Balcony Safety Nets are designed to provide complete protection for homes, apartments, and high-rise buildings. They prevent accidents, especially for children, pets, and elderly people, while still allowing fresh air and sunlight.",
+    fullDescription: "Our balcony safety nets are made from premium quality nylon or HDPE material that is UV resistant and weatherproof. They are transparent or white colored, maintaining the aesthetic appeal of your balcony while providing robust protection. The nets are installed with strong knots and fasteners, ensuring durability for 3-5 years. They prevent children and pets from accidental falls, block birds from entering, and prevent objects from falling down. Installation is quick, easy, and non-intrusive, without damaging your walls or paint.",
     purpose: ["Prevent children from falling", "Protect pets from jumping out", "Avoid birds entering balconies", "Prevent objects from falling down"],
-    features: ["Made from high-quality nylon or HDPE material", "UV resistant and weatherproof", "Strong knots and durable mesh", "Transparent or white color for aesthetic look", "Long-lasting (3–5 years)"],
-    applications: ["Residential apartments", "High-rise buildings", "Hotels", "Hospitals", "Schools"],
-    benefits: ["Ensures family safety", "Maintains balcony beauty", "Easy installation and removal", "Low maintenance"],
+    features: ["Made from high-quality nylon or HDPE material", "UV resistant and weatherproof", "Strong knots and durable mesh", "Transparent or white color for aesthetic look", "Long-lasting (3–5 years)", "Non-damaging installation"],
+    applications: ["Residential apartments", "High-rise buildings", "Hotels", "Hospitals", "Schools", "Villas"],
+    benefits: ["Ensures family safety", "Maintains balcony beauty", "Easy installation and removal", "Low maintenance", "Cost-effective", "10-year warranty on materials"],
+    faqs: [
+      {
+        q: "How long do balcony safety nets last?",
+        a: "Our premium balcony safety nets are made from UV-resistant material and typically last 3-5 years with minimal maintenance. We provide a 10-year warranty on materials."
+      },
+      {
+        q: "Can balcony nets block sunlight?",
+        a: "No, our nets are transparent and designed to allow maximum sunlight and airflow while providing complete safety protection."
+      },
+      {
+        q: "Is installation damaging to walls?",
+        a: "No, we use non-invasive installation methods that don't damage your walls, paint, or structure of your balcony."
+      },
+      {
+        q: "Can the nets be easily removed?",
+        a: "Yes, our balcony nets can be easily removed or repositioned without any permanent damage to your property."
+      }
+    ]
   },
   "building-safety-nets": {
     title: "Building Safety Nets",
+    seoTitle: "Building Safety Nets Installation | Construction Safety | GDR Enterprises Hyderabad",
+    seoDescription: "Professional building safety nets for multi-storey construction projects. Protect workers and property. Fire-resistant options available. Expert installation. Call now for free quote.",
+    seoKeywords: "building safety nets, construction safety nets, multi-story building protection, worker safety nets, fire-resistant safety nets, construction site safety",
     image: pageBuilding,
     description: "Building Safety Nets are installed around multi-storey buildings to protect people and property from falling debris or accidental slips during construction or maintenance work.",
-    purpose: ["Prevent falling of construction materials", "Protect workers and pedestrians", "Safety during exterior cleaning and painting"],
-    features: ["Heavy-duty nylon or polypropylene nets", "High tensile strength", "Fire-resistant (optional)", "Custom sizes available", "Secure fastening system"],
-    applications: ["Commercial buildings", "Apartments", "Office complexes", "Shopping malls"],
-    benefits: ["Reduces accident risks", "Improves work safety standards", "Cost-effective safety solution", "Complies with safety regulations"],
+    fullDescription: "Our building safety nets are heavy-duty nylon or polypropylene nets designed for construction sites and service work. They have high tensile strength and can support significant loads. Fire-resistant options are available for industrial applications. The nets are custom-sized to fit your building dimensions and securely fastened with professional equipment. They protect workers, pedestrians, and property from falling materials while allowing visibility and airflow.",
+    purpose: ["Prevent falling of construction materials", "Protect workers and pedestrians", "Safety during exterior cleaning and painting", "Comply with construction safety standards"],
+    features: ["Heavy-duty nylon or polypropylene nets", "High tensile strength", "Fire-resistant options available", "Custom sizes available", "Secure fastening system", "Professional installation"],
+    applications: ["Commercial buildings", "Apartments", "Office complexes", "Shopping malls", "High-rise projects", "Renovation work"],
+    benefits: ["Reduces accident risks significantly", "Improves work safety standards", "Cost-effective safety solution", "Complies with safety regulations", "Quick and efficient installation", "Professional team support"],
+    faqs: [
+      {
+        q: "Are building safety nets fire-resistant?",
+        a: "Yes, we offer both standard and fire-resistant building safety nets. Fire-resistant options are recommended for industrial and sensitive areas."
+      },
+      {
+        q: "How quickly can you install building nets?",
+        a: "Our professional team can install building safety nets quickly, typically completing standard installations within 1-2 days depending on building size."
+      }
+    ]
   },
-  "car-parking-safety-nets": {
-    title: "Car Parking Safety Nets",
-    image: pageCarparking,
-    description: "Car Parking Safety Nets are used to protect vehicles and people in parking areas from falling objects from upper floors or open structures.",
-    purpose: ["Protect cars from falling debris", "Prevent accidental falls", "Control bird nuisance", "Improve safety in open parking zones"],
-    features: ["Strong mesh material", "Weather-resistant", "UV protected", "Easy installation", "Long life span"],
-    applications: ["Apartment parking areas", "Commercial parking lots", "Basement parking", "Mall parking zones"],
-    benefits: ["Vehicle protection", "Enhanced safety", "Low maintenance", "Affordable solution"],
+  "bird-nets": {
+    title: "Bird & Pigeon Protection Nets",
+    seoTitle: "Bird & Pigeon Protection Nets in Hyderabad | Anti-Bird Netting | GDR Enterprises",
+    seoDescription: "Effective bird and pigeon protection nets for balconies, windows, and AC units. Humane and eco-friendly. Professional installation. Free quote. Call 9100579116.",
+    seoKeywords: "bird nets Hyderabad, pigeon nets, bird protection nets, anti-bird netting, pigeon control nets, bird prevention system",
+    image: pageAntibird,
+    description: "Anti Bird Nets are specially designed to prevent birds from entering balconies, windows, and open spaces without harming them. They are a humane and eco-friendly solution for bird control.",
+    fullDescription: "Our bird and pigeon protection nets are made from high-quality nylon or HDPE material that is UV stabilized and weather resistant. They have a transparent appearance and strong durable mesh construction. The nets prevent birds and pigeons from entering your home while maintaining airflow and visibility. Installation is simple and does not damage your property. These nets are ideal for residential and commercial applications, providing a humane solution to bird problems.",
+    purpose: ["Stop birds from entering balconies and buildings", "Prevent nesting and droppings", "Protect property and maintain cleanliness", "Eco-friendly bird control"],
+    features: ["Made from high-quality nylon or HDPE material", "UV stabilized and weather resistant", "Strong and durable mesh", "Transparent appearance", "Long-lasting (3–5 years)", "Humane solution"],
+    applications: ["Balconies", "Windows", "AC outdoor units", "Warehouses", "Factories", "Terraces"],
+    benefits: ["Hygienic environment", "No harm to birds", "Maintains airflow and sunlight", "Easy installation and maintenance", "Cost-effective solution", "Professional installation"],
+    faqs: [
+      {
+        q: "Do bird nets harm birds?",
+        a: "No, our bird nets are designed to prevent entry without harming birds. They are a humane and eco-friendly solution."
+      },
+      {
+        q: "Can I see through bird nets?",
+        a: "Yes, our bird nets are transparent and maintain visibility while providing complete bird protection."
+      }
+    ]
   },
-  "children-safety-nets": {
-    title: "Children Safety Nets",
+  "child-safety-nets": {
+    title: "Child Safety Nets",
+    seoTitle: "Child Safety Nets in Hyderabad | Kids Protection | GDR Enterprises",
+    seoDescription: "Premium child safety nets for maximum protection. Balcony, staircase, and window installation. Non-toxic, eco-friendly. Peace of mind for parents. Call 9100579116.",
+    seoKeywords: "child safety nets Hyderabad, kids safety nets, balcony child protection, staircase safety nets, children fall prevention, baby safety nets",
     image: pageChildren,
     description: "Children Safety Nets are specially designed to prevent accidents in homes and play areas. They are installed in balconies, staircases, windows, and open spaces.",
-    purpose: ["Prevent children from falling", "Create safe play areas", "Block dangerous openings"],
-    features: ["Soft but strong material", "Non-toxic and eco-friendly", "Small mesh size for extra safety", "Tear-resistant", "Invisible look"],
-    applications: ["Homes", "Schools", "Daycare centers", "Play zones", "Hospitals"],
-    benefits: ["Peace of mind for parents", "Safe indoor and outdoor environment", "Quick installation", "Child-friendly design"],
+    fullDescription: "Our child safety nets are crafted with soft but strong material that is non-toxic and eco-friendly. The small mesh size provides extra safety for children while being completely invisible. The nets are tear-resistant and professionally installed to ensure maximum security. They are perfect for homes with young children, daycare centers, schools, and play zones. Parents can enjoy complete peace of mind knowing their children are protected from dangerous falls.",
+    purpose: ["Prevent children from falling", "Create safe play areas", "Block dangerous openings", "Protect in high-risk areas"],
+    features: ["Soft but strong material", "Non-toxic and eco-friendly", "Small mesh size for extra safety", "Tear-resistant", "Invisible look", "Professional installation"],
+    applications: ["Homes", "Schools", "Daycare centers", "Play zones", "Hospitals", "Balconies"],
+    benefits: ["Peace of mind for parents", "Safe indoor and outdoor environment", "Quick installation", "Child-friendly design", "Maximum protection", "Inspector approved"],
+    faqs: [
+      {
+        q: "Is the material safe for children?",
+        a: "Absolutely. Our child safety nets are made from non-toxic, eco-friendly material that is completely safe and approved for child use."
+      }
+    ]
+  },
+  "sports-nets": {
+    title: "Sports Safety Nets",
+    seoTitle: "Sports Nets Installation in Hyderabad | Badminton, Cricket Nets | GDR Enterprises",
+    seoDescription: "Professional sports net installation - badminton courts, cricket practice nets, football goals. Quality materials. Expert installation. Free consultation. Call 9100579116.",
+    seoKeywords: "sports nets Hyderabad, badminton court nets, cricket practice nets, football goal nets, sports court safety nets, professional sports netting",
+    image: pageSports,
+    description: "Sports Safety Nets are specially designed to protect players and spectators during sports activities while keeping balls within the playing area.",
+    fullDescription: "Our sports safety nets are engineered for professional-grade performance in badminton courts, cricket practice areas, football goals, and other sports facilities. The nets are made from durable material with tight weave construction for accurate ball control. They can withstand intense use and weather conditions. Professional installation ensures proper tension and durability. Whether for residential practice or professional facilities, our sports nets provide reliable performance.",
+    purpose: ["Prevent balls from leaving playing area", "Protect players and spectators", "Avoid damage to nearby property", "Maintain discipline in sports zones"],
+    features: ["Durable, professional-grade material", "Tight weave construction", "Weather-resistant", "Proper tension and installation", "Customizable sizes", "Long-lasting performance"],
+    applications: ["Badminton courts", "Cricket practice areas", "Football goals", "Tennis courts", "Sports academies", "Commercial sports facilities"],
+    benefits: ["Professional performance", "Accurate ball control", "Player and spectator safety", "Long service life", "Minimal maintenance", "Professional appearance"],
+    faqs: [
+      {
+        q: "How long do sports nets last?",
+        a: "Our professional sports nets last 5-10 years depending on usage and maintenance, providing excellent value for investment."
+      }
+    ]
   },
   "construction-safety-nets": {
     title: "Construction Safety Nets",
+    seoTitle: "Construction Safety Nets in Hyderabad | Industrial Grade | GDR Enterprises",
+    seoDescription: "Industrial-grade construction safety nets for worker protection. Passes safety standards. Heavy-duty, durable. Expert installation. Free quote. Call 9100579116.",
+    seoKeywords: "construction safety nets Hyderabad, industrial safety nets, heavy-duty construction nets, worker safety nets, OSHA compliant safety nets",
     image: pageConstruction,
     description: "Construction Safety Nets are mandatory safety equipment used at construction sites to protect workers and materials from falling hazards.",
-    purpose: ["Prevent falls from height", "Catch falling tools or materials", "Protect nearby people"],
-    features: ["Heavy-duty industrial grade nets", "High load-bearing capacity", "Flame retardant options", "Custom installation", "Certified quality materials"],
-    applications: ["Construction sites", "Bridges", "Flyovers", "High-rise buildings", "Industrial projects"],
-    benefits: ["Reduces injuries and accidents", "Improves worker confidence", "Follows safety standards", "Cost-efficient safety measure"],
+    fullDescription: "Our construction safety nets are industrial-grade equipment designed to meet strict safety standards. They have a high load-bearing capacity and are made from certified quality materials. Fire-retardant options are available for hazardous environments. The nets are custom-installed by our professional team with proper anchoring and tension. They provide comprehensive protection for workers, equipment, and surrounding properties during construction and maintenance activities.",
+    purpose: ["Prevent falls from height", "Catch falling tools or materials", "Protect nearby people", "Meet safety compliance standards"],
+    features: ["Heavy-duty industrial grade nets", "High load-bearing capacity", "Flame retardant options", "Custom installation", "Certified quality materials", "Professional team"],
+    applications: ["Construction sites", "Bridges", "Flyovers", "High-rise buildings", "Industrial projects", "Renovation sites"],
+    benefits: ["Reduces injuries and accidents", "Improves worker confidence", "Follows safety standards", "Cost-efficient safety measure", "Professional installation", "Comprehensive support"],
+    faqs: [
+      {
+        q: "Are construction nets compliant with safety standards?",
+        a: "Yes, our construction safety nets meet all applicable safety standards and regulations for construction site safety."
+      }
+    ]
   },
-  "duct-area-safety-nets": {
-    title: "Duct Area Safety Nets",
-    image: pageDuct,
-    description: "Duct Area Safety Nets are installed in open duct spaces inside buildings to prevent falls and block garbage or birds from entering.",
-    purpose: ["Prevent accidental falls", "Stop garbage dumping", "Avoid bird nesting", "Improve hygiene"],
-    features: ["High strength nylon nets", "Moisture resistant", "Long-lasting", "Easy to install", "Minimal visibility"],
-    applications: ["Apartment duct areas", "Hospitals", "Office buildings", "Hotels", "Commercial complexes"],
-    benefits: ["Improved safety", "Clean and hygienic environment", "No disturbance to ventilation", "Low maintenance"],
-  },
-  "industrial-safety-nets": {
-    title: "Industrial Safety Nets",
-    image: pageIndustrial,
-    description: "Industrial Safety Nets are designed for factories and industrial environments to protect workers and machinery from falling hazards.",
-    purpose: ["Worker safety", "Protect machines", "Prevent accidents in height work", "Material handling safety"],
-    features: ["Heavy-duty netting", "Chemical resistant", "Fire retardant", "High tensile strength", "Long durability"],
-    applications: ["Factories", "Warehouses", "Power plants", "Manufacturing units", "Oil & gas industries"],
-    benefits: ["Safer work environment", "Reduced insurance risks", "Long service life", "Professional safety solution"],
-  },
-  "swimming-pool-safety-nets": {
-    title: "Swimming Pool Safety Nets",
-    image: pagePool,
-    description: "Swimming Pool Safety Nets are installed over or around swimming pools to prevent accidental drowning, especially for children and pets.",
-    purpose: ["Prevent accidental falls into pools", "Child and pet protection", "Maintain pool hygiene"],
-    features: ["Waterproof nylon nets", "Strong load capacity", "UV resistant", "Easy open and close system", "Custom fit design"],
-    applications: ["Residential swimming pools", "Hotels", "Resorts", "Schools", "Clubs"],
-    benefits: ["Life-saving protection", "Peace of mind", "Keeps pool clean", "Stylish and safe solution"],
-  },
-  "anti-bird-nets": {
-    title: "Anti Bird Nets",
+  "window-nets": {
+    title: "Window Protection Nets",
+    seoTitle: "Window Safety Nets in Hyderabad | Bird Prevention | GDR Enterprises",
+    seoDescription: "Window safety nets for child protection and bird prevention. Transparent, invisible design. Professional installation. Free quote. Call 9100579116.",
+    seoKeywords: "window safety nets Hyderabad, window bird nets, window protection nets, child safety windows, invisible window nets",
     image: pageAntibird,
-    description: "Anti Bird Nets are specially designed to prevent birds from entering balconies, windows, and open spaces without harming them. They are a humane and eco-friendly solution for bird control in residential and commercial areas.",
-    purpose: ["Stop birds from entering balconies and buildings", "Prevent nesting and droppings", "Protect property and cleanliness"],
-    features: ["Made from high-quality nylon or HDPE material", "UV stabilized and weather resistant", "Strong and durable mesh", "Transparent or white color for neat appearance", "Long-lasting (3–5 years)"],
-    applications: ["Balconies", "Windows", "Terraces", "Warehouses", "Factories"],
-    benefits: ["Hygienic environment", "No harm to birds", "Maintains airflow and sunlight", "Easy installation and maintenance", "Cost-effective solution"],
-  },
-  "pigeon-safety-nets": {
-    title: "Pigeon Safety Nets",
-    image: pagePigeon,
-    description: "Pigeon Safety Nets are used specifically to block pigeons from entering buildings and causing health hazards. They are widely installed in apartments and commercial buildings.",
-    purpose: ["Prevent pigeon nesting", "Stop pigeon droppings", "Avoid spread of diseases", "Protect walls and interiors"],
-    features: ["Heavy-duty nylon netting", "Small mesh size to block pigeons", "UV and heat resistant", "Strong knots and long durability", "Almost invisible look"],
-    applications: ["Apartment balconies", "Window grills", "AC outdoor units", "Parking areas", "Hospitals and schools"],
-    benefits: ["Clean and healthy surroundings", "No bird injuries", "Long service life", "Easy to clean", "Professional appearance"],
-  },
-  "bird-protection-nets": {
-    title: "Bird Protection Nets",
-    image: pageBirdprotection,
-    description: "Bird Protection Nets are used to protect crops, plants, fruits, and open areas from bird damage. They are widely used in agriculture and gardens.",
-    purpose: ["Protect fruits and vegetables", "Prevent birds from damaging plants", "Avoid crop loss", "Maintain garden beauty"],
-    features: ["Lightweight and strong material", "UV protected", "Tear resistant", "Flexible installation", "Reusable nets"],
-    applications: ["Farms", "Gardens", "Nurseries", "Vineyards", "Greenhouses"],
-    benefits: ["Safe for birds", "Increases crop yield", "Eco-friendly solution", "Easy installation", "Affordable protection"],
-  },
-  "pigeon-bird-spikes": {
-    title: "Pigeon & Bird Spikes",
-    image: pageSpikes,
-    description: "Pigeon & Bird Spikes are physical bird deterrents installed on ledges, parapets, signboards, and beams to stop birds from sitting or nesting.",
-    purpose: ["Prevent birds from landing", "Stop nesting on edges", "Keep buildings clean", "Protect property"],
-    features: ["Stainless steel or plastic spikes", "Rust-proof and weather resistant", "Long-lasting material", "Easy installation with adhesive or screws", "Non-harmful design"],
-    applications: ["Window ledges", "Building edges", "Roofs", "Signboards", "CCTV poles"],
-    benefits: ["Humane bird control", "Low maintenance", "Durable and strong", "Professional look", "Effective bird deterrent"],
-  },
-  "sports-safety-nets": {
-    title: "Sports Safety Nets",
-    image: pageSports,
-    description: "Sports Safety Nets are specially designed to protect players, spectators, and surrounding property during sports activities. These nets help prevent balls from going out of the playing area and reduce the risk of injuries or damage.",
-    purpose: ["Prevent balls from leaving the playing area", "Protect players and spectators", "Avoid damage to nearby property", "Maintain discipline and safety in sports zones"],
-    features: ["Made from high-quality nylon or HDPE material", "High tensile strength and shock absorption", "UV resistant and weatherproof", "Tear-resistant and long-lasting", "Available in different mesh sizes and thickness", "Custom-made according to ground size"],
-    applications: ["Cricket grounds", "Football grounds", "Tennis courts", "Badminton courts", "Basketball courts", "Volleyball courts", "Schools and colleges", "Indoor and outdoor sports arenas"],
-    benefits: ["Ensures player safety", "Prevents ball loss", "Protects nearby buildings and vehicles", "Improves game discipline", "Cost-effective safety solution", "Easy installation and maintenance"],
-  },
-  "cricket-practice-nets": {
-    title: "Cricket Practice Nets",
-    image: pageCricket,
-    description: "Cricket Practice Nets are used for safe and professional cricket training. They help players practice batting and bowling without risk of injury or ball loss.",
-    purpose: ["Safe cricket training", "Prevent balls from going outside", "Protect players and coaches"],
-    features: ["Heavy-duty net material", "Strong knots and mesh", "Weather-resistant", "Long-lasting", "Available in standard and custom sizes"],
-    applications: ["Cricket academies", "Schools and colleges", "Sports clubs", "Residential grounds"],
-    benefits: ["Improves practice quality", "Safe environment", "Durable and reliable", "Professional training setup"],
-  },
-  "football-ground-nets": {
-    title: "Football Ground Nets",
-    image: pageFootball,
-    description: "Football Ground Nets are installed around football fields to stop balls from going outside and ensure safety for spectators and nearby areas.",
-    purpose: ["Keep football within ground", "Protect public areas", "Prevent accidents"],
-    features: ["Strong nylon nets", "UV protected", "High impact resistance", "Weatherproof", "Easy installation"],
-    applications: ["Football stadiums", "Schools", "Sports complexes", "Community playgrounds"],
-    benefits: ["Better game control", "Reduced ball loss", "Safe surroundings", "Long service life"],
-  },
-  "tennis-court-nets": {
-    title: "Tennis Court Nets",
-    image: pageTennis,
-    description: "Tennis Court Nets are used for professional and recreational tennis courts to ensure safety and proper play area management.",
-    purpose: ["Safe tennis play", "Prevent balls from entering public areas", "Improve court discipline"],
-    features: ["High-quality net material", "Strong and flexible", "Weather resistant", "Standard and customized sizes", "Long durability"],
-    applications: ["Tennis courts", "Sports clubs", "Schools", "Hotels and resorts"],
-    benefits: ["Professional appearance", "Player safety", "Easy maintenance", "Long-lasting performance"],
-  },
-  "multi-sport-safety-nets": {
-    title: "Multi-Sport Safety Nets",
-    image: pageMultisport,
-    description: "Multi-Sport Safety Nets are designed for grounds where multiple sports are played such as cricket, football, volleyball, and badminton.",
-    purpose: ["Provide safety for different sports", "Separate play zones", "Avoid cross-ball interference"],
-    features: ["Heavy-duty nets", "Custom size installation", "Weather and UV resistant", "High impact strength"],
-    applications: ["Sports academies", "Indoor stadiums", "Outdoor playgrounds", "Schools and colleges"],
-    benefits: ["Versatile use", "Enhanced safety", "Cost-effective", "Professional sports setup"],
-  },
+    description: "Window Protection Nets are installed to prevent unwanted bird entry while maintaining ventilation and visibility.",
+    fullDescription: "Our window protection nets combine functionality with aesthetics. They prevent birds from entering while maintaining clear visibility and airflow. The transparent netting is nearly invisible and does not affect the appearance of your windows. Easy installation without damaging frames or glass. Suitable for residential apartments, commercial buildings, and offices.",
+    purpose: ["Bird prevention", "Child safety", "Maintain ventilation", "Protect indoor spaces"],
+    features: ["Transparent design", "Non-intrusive installation", "Durable material", "UV resistant", "Low maintenance", "Professional installation"],
+    applications: ["Residential windows", "Commercial buildings", "Hospitals", "Schools", "Offices", "Hotels"],
+    benefits: ["Bird prevention", "Child protection", "Maintains airflow", "Invisible appearance", "Easy maintenance", "Cost-effective"],
+    faqs: [
+      {
+        q: "Does window netting block light?",
+        a: "No, our transparent window nets do not block light and maintain full visibility while providing bird and child protection."
+      }
+    ]
+  }
 };
 
 const ServiceDetail = () => {
@@ -224,9 +232,23 @@ const ServiceDetail = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title={`${service.title} in Hyderabad | GDR Enterprises`}
-        description={service.description.slice(0, 155)}
-        keywords={`${service.title}, ${service.title} Hyderabad, safety nets, GDR Enterprises`}
+        title={`${service.seoTitle || service.title + ' in Hyderabad | GDR Enterprises'}`}
+        description={service.seoDescription || service.description.slice(0, 155)}
+        keywords={service.seoKeywords || `${service.title}, ${service.title} Hyderabad, safety nets, GDR Enterprises`}
+      />
+      {service.faqs && <FAQSchema faqs={service.faqs} />}
+      <ServiceSchema
+        serviceName={service.title}
+        description={service.description}
+        serviceType={service.title}
+        areaServed={["Hyderabad", "Vijayawada", "Visakhapatnam"]}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+          { name: service.title, url: `/service/${slug}` }
+        ]}
       />
       <Header />
       
@@ -244,13 +266,22 @@ const ServiceDetail = () => {
       {/* Content */}
       <section className="py-12 bg-background">
         <div className="container max-w-4xl">
-          <Link to="/" className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-8 font-semibold">
-            <ArrowLeft className="w-4 h-4" /> Back to Home
+          <Link to="/services" className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-8 font-semibold">
+            <ArrowLeft className="w-4 h-4" /> Back to Services
           </Link>
 
-          <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-            {service.description}
-          </p>
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold font-heading text-foreground mb-4">What is {service.title}?</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+
+          <div className="mb-12 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
+            <p className="text-base text-foreground leading-relaxed">
+              {service.fullDescription}
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {renderList("Purpose", service.purpose)}
@@ -259,21 +290,45 @@ const ServiceDetail = () => {
             {renderList("Benefits", service.benefits)}
           </div>
 
+          {service.faqs && service.faqs.length > 0 && (
+            <div className="mt-12 border-t pt-8">
+              <h2 className="text-2xl font-bold font-heading text-foreground mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                {service.faqs.map((faq, index) => (
+                  <details key={index} className="border rounded-lg p-4 hover:bg-muted/50 transition-colors">
+                    <summary className="cursor-pointer font-semibold text-foreground hover:text-primary">
+                      {faq.q}
+                    </summary>
+                    <p className="mt-3 text-muted-foreground">{faq.a}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* CTA */}
           <div className="mt-12 bg-primary/10 rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold font-heading text-foreground mb-4">
               Get a Free Quote for {service.title}
             </h3>
             <p className="text-muted-foreground mb-6">
-              GDR Enterprise Safety Nets - Guaranteed to be 100% safe and durable.
+              GDR Enterprise Safety Nets - Guaranteed to be 100% safe and durable. Professional installation with 10-year warranty.
             </p>
-            <a
-              href="tel:9100579116"
-              className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:opacity-90 transition-opacity"
-            >
-              <Phone className="w-5 h-5" />
-              Call Now: +91 9100579116
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:9100579116"
+                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:opacity-90 transition-opacity"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now: +91 9100579116
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full text-lg font-bold shadow-lg hover:opacity-90 transition-opacity"
+              >
+                Get Free Quote
+              </Link>
+            </div>
           </div>
         </div>
       </section>

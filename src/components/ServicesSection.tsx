@@ -13,17 +13,13 @@ import servicePets from "@/assets/service-pets.jpg";
 import serviceSpikes from "@/assets/service-spikes.jpg";
 
 const services = [
-  { image: serviceBalcony, title: "Balcony Safety Nets", slug: "balcony-safety-nets", desc: "GDR Enterprise Safety Nets offers Balcony Safety Nets ensuring protection from falls. High-quality, durable, and reliable solutions for peace of mind." },
-  { image: servicePigeon, title: "Pigeon Safety Nets", slug: "", desc: "GDR Enterprise Safety Nets offers top-quality Pigeon Safety Nets to protect your premises. Keep your space safe with our reliable solutions." },
-  { image: serviceInvisibleGrill, title: "Invisible Grill for Balcony", slug: "", desc: "GDR Safety Nets offers Invisible Grill for Balconies, providing security without obstructing views. Durable, sleek, and perfect for modern living spaces." },
-  { image: serviceChildren, title: "Children Safety Nets", slug: "children-safety-nets", desc: "GDR Safety Nets provides high-quality safety nets ensuring Children Safety. Trusted by many, they offer reliable protection for balconies and windows." },
-  { image: serviceAntiBird, title: "Anti Bird Nets", slug: "", desc: "GDR Safety Nets offers high-quality Anti Bird Nets, providing effective protection against birds while ensuring safety and durability." },
-  { image: serviceConstruction, title: "Construction Safety Nets", slug: "construction-safety-nets", desc: "GDR Safety Nets offers high-quality Construction Safety Nets, ensuring a secure environment for workers and preventing accidents effectively." },
-  { image: serviceSports, title: "All Types Sports Nets", slug: "", desc: "Discover top-quality Sports Nets from GDR Safety Nets. Ensure safety and durability for all sports activities. Order now!" },
-  { image: serviceDuct, title: "Duct Area Safety Nets", slug: "duct-area-safety-nets", desc: "GDR Safety Nets provides durable Duct Area Safety Nets ensuring safety in elevated areas. Trust their expertise for protection." },
-  { image: serviceBuilding, title: "Building Safety Nets", slug: "building-safety-nets", desc: "GDR Safety Nets offers top-quality Building Safety Nets, ensuring utmost protection against falls and accidents. Trust their expertise!" },
-  { image: servicePets, title: "Pets Safety Nets", slug: "", desc: "GDR Safety Nets offers high-quality Pet Safety Nets to protect your beloved pets from accidental falls. Contact us today!" },
-  { image: serviceSpikes, title: "Pigeon & Bird Spikes", slug: "", desc: "GDR Safety Nets offers effective Pigeon & Bird Spikes to deter birds from roosting. Protect your property now!" },
+  { image: serviceBalcony, title: "Balcony Safety Nets", slug: "balcony-safety-nets", desc: "Prevent falls, protect children & pets. UV-resistant, transparent nets for residential and commercial balconies. Professional installation with warranty." },
+  { image: serviceBuilding, title: "Building Safety Nets", slug: "building-safety-nets", desc: "Heavy-duty construction safety nets for multi-storey buildings. Fire-resistant options available. Complete worker protection & compliance." },
+  { image: serviceAntiBird, title: "Bird & Pigeon Protection Nets", slug: "bird-nets", desc: "Humane, eco-friendly bird control for balconies & windows. Transparent netting prevents pigeons without harm. Maintains airflow and visibility." },
+  { image: serviceChildren, title: "Child Safety Nets", slug: "child-safety-nets", desc: "Non-toxic, invisible safety nets for children. Perfect for balconies, staircases & windows. Maximum protection with peace of mind for parents." },
+  { image: serviceSports, title: "Sports Safety Nets", slug: "sports-nets", desc: "Professional-grade nets for badminton, cricket, football & tennis courts. Durable, weather-resistant with proper tension installation." },
+  { image: serviceConstruction, title: "Construction Safety Nets", slug: "construction-safety-nets", desc: "Industrial-grade worker protection. High load-bearing capacity, fire-retardant options. Meets all safety compliance standards." },
+  { image: serviceInvisibleGrill, title: "Window Protection Nets", slug: "window-nets", desc: "Transparent window safety nets for bird prevention and child protection. Nearly invisible design maintains aesthetic appeal." },
 ];
 
 const ServicesSection = () => {

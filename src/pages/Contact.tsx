@@ -23,9 +23,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Contact GDR Enterprises - Free Quote for Safety Nets"
-        description="Contact GDR Enterprises for free safety net quotes. Call 9100579116. We serve Hyderabad, Vijayawada & Visakhapatnam. Mon-Sat 8AM-8PM."
-        keywords="contact safety nets Hyderabad, safety nets quote, bird nets enquiry, GDR Enterprises contact"
+        title="Contact GDR Enterprises - Free Safety Nets Quote in Hyderabad"
+        description="Get instant free safety net quotes from GDR Enterprises. Call 9100579116 or fill enquiry form. Expert consultation for balcony nets, bird nets, sports nets. Serving Hyderabad, Vijayawada & Visakhapatnam."
+        keywords="contact GDR Enterprises, safety nets quote Hyderabad, free bird nets enquiry, safety net installation quote, contact number, Hyderabad safety nets provider"
       />
       <Header />
 
@@ -117,8 +117,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
-                    <a href="mailto:GDREnterprisesasafetynets@gmail.com" className="text-muted-foreground hover:text-secondary break-all text-sm">
-                      GDREnterprisesasafetynets@gmail.com
+                    <a href="mailto:gdrenterprisesasafetynets@gmail.com" className="text-muted-foreground hover:text-secondary break-all text-sm">
+                      gdrenterprisesasafetynets@gmail.com
                     </a>
                   </div>
                 </div>

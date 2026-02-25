@@ -9,9 +9,9 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Safety Net Services in Hyderabad | GDR Enterprises"
-        description="Explore our complete range of safety net services - balcony nets, bird nets, pigeon nets, sports nets, construction nets. Professional installation across Hyderabad."
-        keywords="safety net services, balcony safety nets, bird nets installation, pigeon nets, sports safety nets, construction safety nets Hyderabad"
+        title="Professional Safety Net Services in Hyderabad | Balcony, Bird & Sports Nets | GDR Enterprises"
+        description="Complete safety net solutions in Hyderabad - balcony nets, bird & pigeon nets, sports nets, construction nets, window nets. 10+ years experience. Professional installation. Free quotes!"
+        keywords="safety net services Hyderabad, balcony safety nets installation, bird nets, pigeon nets removal, sports safety nets, construction safety nets, window protection nets, invisible grills services"
       />
       <Header />
 

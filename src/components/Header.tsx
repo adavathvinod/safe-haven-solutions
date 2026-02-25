@@ -5,27 +5,17 @@ import { Phone, Menu, X, ChevronDown } from "lucide-react";
 const safetyNetChildren = [
   { label: "Balcony Safety Nets", slug: "balcony-safety-nets" },
   { label: "Building Safety Nets", slug: "building-safety-nets" },
-  { label: "Car Parking Safety Nets", slug: "car-parking-safety-nets" },
-  { label: "Children Safety Nets", slug: "children-safety-nets" },
+  { label: "Child Safety Nets", slug: "child-safety-nets" },
   { label: "Construction Safety Nets", slug: "construction-safety-nets" },
-  { label: "Duct Area Safety Nets", slug: "duct-area-safety-nets" },
-  { label: "Industrial Safety Nets", slug: "industrial-safety-nets" },
-  { label: "Swimming Pool Safety Nets", slug: "swimming-pool-safety-nets" },
+  { label: "Window Protection Nets", slug: "window-nets" },
 ];
 
 const birdNetChildren = [
-  { label: "Anti Bird Nets", slug: "anti-bird-nets" },
-  { label: "Pigeon Safety Nets", slug: "pigeon-safety-nets" },
-  { label: "Bird Protection Nets", slug: "bird-protection-nets" },
-  { label: "Pigeon & Bird Spikes", slug: "pigeon-bird-spikes" },
+  { label: "Bird & Pigeon Protection Nets", slug: "bird-nets" },
 ];
 
 const sportsNetChildren = [
-  { label: "Sports Safety Nets", slug: "sports-safety-nets" },
-  { label: "Cricket Practice Nets", slug: "cricket-practice-nets" },
-  { label: "Football Ground Nets", slug: "football-ground-nets" },
-  { label: "Tennis Court Nets", slug: "tennis-court-nets" },
-  { label: "Multi-Sport Safety Nets", slug: "multi-sport-safety-nets" },
+  { label: "Sports Safety Nets", slug: "sports-nets" },
 ];
 
 const navItems = [
@@ -75,23 +65,13 @@ const Header = () => {
               {item.children && openDropdown === item.label && (
                 <div className="absolute top-full left-0 bg-background shadow-lg rounded-md py-2 min-w-[220px] border border-border z-50">
                   {item.children.map((child) => (
-                    child.slug ? (
-                      <Link
-                        key={child.label}
-                        to={`/service/${child.slug}`}
-                        className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-                      >
-                        {child.label}
-                      </Link>
-                    ) : (
-                      <a
-                        key={child.label}
-                        href="/#services"
-                        className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
-                      >
-                        {child.label}
-                      </a>
-                    )
+                    <Link
+                      key={child.label}
+                      to={`/service/${child.slug}`}
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      {child.label}
+                    </Link>
                   ))}
                 </div>
               )}
@@ -129,25 +109,14 @@ const Header = () => {
                 {item.label}
               </Link>
               {item.children && item.children.map((child) => (
-                child.slug ? (
-                  <Link
-                    key={child.label}
-                    to={`/service/${child.slug}`}
-                    className="block pl-10 pr-6 py-2 text-sm text-muted-foreground hover:bg-accent transition-colors"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {child.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={child.label}
-                    href="/#services"
-                    className="block pl-10 pr-6 py-2 text-sm text-muted-foreground hover:bg-accent transition-colors"
-                    onClick={() => setMobileOpen(false)}
-                  >
-                    {child.label}
-                  </a>
-                )
+                <Link
+                  key={child.label}
+                  to={`/service/${child.slug}`}
+                  className="block pl-10 pr-6 py-2 text-sm text-muted-foreground hover:bg-accent transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {child.label}
+                </Link>
               ))}
             </div>
           ))}
