@@ -39,7 +39,6 @@ Allow: /
 
 # Sitemap locations
 Sitemap: https://gdrenterprises.in/sitemap.xml
-Sitemap: https://gdrenterprises.in/sitemap-images.xml
 
 # Host preference
 Host: https://gdrenterprises.in
