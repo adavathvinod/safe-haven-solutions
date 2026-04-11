@@ -13,16 +13,16 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Safety Nets & Bird Nets Installation in Hyderabad | GDR Enterprises | 40% OFF"
-        description="Premium safety nets & bird nets installation in Hyderabad, Vijayawada & Visakhapatnam. Balcony protection, pigeon control, child safety. Expert installation. Get 40% OFF now! Call 9100579116."
-        keywords="safety nets Hyderabad, bird nets Hyderabad, pigeon nets, balcony safety nets, children safety nets, construction safety nets, sports nets, invisible grills Hyderabad"
+        title="Pigeon & Balcony Safety Nets Installation in Hyderabad | Free Site Visit"
+        description="Pigeon net installation and balcony safety nets in Hyderabad with free site visit, free measurement, same day service, and 10 year warranty. Starting from Rs.10 / Sq Ft. Call 9100579116."
+        keywords="pigeon net Hyderabad, pigeon net installation Hyderabad, balcony safety nets Hyderabad, bird nets near me, pigeon nets near me, child safety nets Hyderabad"
       />
       <Header />
       <HeroSlider />
-      <EnquiryForm />
       <RecentWorks />
-      <ServicesSection />
       <WhyChooseUs />
+      <EnquiryForm />
+      <ServicesSection />
       <ThreeSteps />
       <Footer />
       <FloatingButtons />

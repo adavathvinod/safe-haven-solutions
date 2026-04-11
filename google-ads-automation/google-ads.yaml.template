@@ -1,0 +1,52 @@
+# Google Ads API Configuration File
+# Instructions: https://developers.google.com/google-ads/api/docs/client-libs/python/configuration
+
+# Your Google Ads Developer Token
+# Get it from: https://ads.google.com/aw/apicenter
+developer_token: INSERT_DEVELOPER_TOKEN_HERE
+
+# OAuth2 Client ID from Google Cloud Console
+# Get it from: https://console.cloud.google.com/apis/credentials
+client_id: INSERT_CLIENT_ID_HERE.apps.googleusercontent.com
+
+# OAuth2 Client Secret
+client_secret: INSERT_CLIENT_SECRET_HERE
+
+# Refresh Token (generated after OAuth flow)
+refresh_token: INSERT_REFRESH_TOKEN_HERE
+
+# Optional: Login Customer ID (Manager Account)
+# Format: 123-456-7890
+# Only needed if using a Manager Account
+# login_customer_id: INSERT_LOGIN_CUSTOMER_ID_HERE
+
+# Optional: Linked Customer ID (if different from login)
+# linked_customer_id: INSERT_LINKED_CUSTOMER_ID_HERE
+
+# Optional: Path to JSON private key file for service account authentication
+# Use this OR OAuth2 credentials above, not both
+# json_key_file_path: INSERT_PATH_TO_JSON_KEY_FILE
+
+# Optional: Delegated Account (for service accounts)
+# impersonated_email: INSERT_IMPERSONATED_EMAIL_HERE
+
+# Optional: API version (defaults to latest)
+# api_version: v17
+
+# Optional: Logging configuration
+# logging:
+#   version: 1
+#   disable_existing_loggers: False
+#   formatters:
+#     default_fmt:
+#       format: '[%(asctime)s - %(levelname)s] %(message)s'
+#       datefmt: '%Y-%m-%d %H:%M:%S'
+#   handlers:
+#     default_handler:
+#       class: logging.StreamHandler
+#       formatter: default_fmt
+#   loggers:
+#     google.ads.googleads:
+#       level: INFO
+#       handlers:
+#       - default_handler

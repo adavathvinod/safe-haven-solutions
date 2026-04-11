@@ -1,0 +1,29 @@
+section,setting,value
+Campaign Setup,Campaign Name,Hyderabad_Search_Leads
+Campaign Setup,Campaign Type,Search
+Campaign Setup,Goal,Leads
+Campaign Setup,Daily Budget INR,1000
+Campaign Setup,Bidding Week 1,Maximize Clicks
+Campaign Setup,Max CPC Cap INR (Week 1),30
+Campaign Setup,Bidding After Tracking Stable,Maximize Conversions
+Campaign Setup,Search Network,ON
+Campaign Setup,Display Network,OFF
+Location & Language,Target Location,Hyderabad
+Location & Language,Radius,15-20 km
+Location & Language,Languages,English|Telugu|Hindi
+Schedule,Ad Schedule,06:00-22:00 all days
+Devices,Mobile Bid Adj,+20%
+Devices,Desktop Bid Adj,-10%
+Devices,Tablet Bid Adj,-20%
+Ad Groups,Core_Safety_Nets Budget Split,35%
+Ad Groups,Balcony_Child_Safety Budget Split,25%
+Ad Groups,Bird_Pigeon_Nets Budget Split,25%
+Ad Groups,Urgent_Installation_NearMe Budget Split,15%
+Assets,Call Asset Number,+91 9100579116
+Assets,Call Reporting,ON
+Assets,Call Conversion Threshold,30 sec
+Tracking,Primary Conversion 1,call_click
+Tracking,Primary Conversion 2,contact_form_submit
+KPI,Target CPC INR,20-30
+KPI,Target Calls Per Day,4-5
+KPI,Required Daily Clicks,~30

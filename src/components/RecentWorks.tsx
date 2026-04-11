@@ -10,14 +10,14 @@ import work7 from "@/assets/work-7.png";
 import work8 from "@/assets/work-8.png";
 
 const works = [
-  { image: work1, title: "Building Safety Nets Installation" },
-  { image: work2, title: "Balcony Safety Nets" },
-  { image: work3, title: "House Covering Safety Nets" },
-  { image: work4, title: "Pigeon & Bird Spikes" },
+  { image: work1, title: "Building Safety Nets" },
+  { image: work2, title: "Balcony Nets Installation" },
+  { image: work3, title: "Building Cover Safety Nets" },
+  { image: work4, title: "Pigeon & Bird Protection Work" },
   { image: work5, title: "Children Safety Nets" },
-  { image: work6, title: "Kids Balcony Protection" },
-  { image: work7, title: "Safety Net Installation Work" },
-  { image: work8, title: "Balcony Pigeon Nets" },
+  { image: work6, title: "Balcony Protection Nets" },
+  { image: work7, title: "Safety Net Installation" },
+  { image: work8, title: "Pigeon Nets for Balcony" },
 ];
 
 const RecentWorks = () => {
@@ -44,10 +44,10 @@ const RecentWorks = () => {
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center text-primary mb-4">
-          Our Recent Works
+          Our Recent Installations
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          To Book Service Call @ <a href="tel:9100579116" className="text-secondary font-bold">+91 9100579116</a>
+          Real balcony nets, pigeon nets, and building nets installed by our team in Hyderabad. To book a free visit call <a href="tel:9100579116" className="text-secondary font-bold">+91 9100579116</a>
         </p>
 
         <div className="relative">

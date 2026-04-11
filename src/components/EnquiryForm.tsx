@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
+import { trackContactFormSubmit } from "@/lib/gtmTracking";
 
 const EnquiryForm = () => {
   const [name, setName] = useState("");
@@ -7,19 +8,33 @@ const EnquiryForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hi, I'm ${name}. I'd like to enquire about your safety net services. My number is ${mobile}.`;
-    window.open(
-      `https://wa.me/919100579116?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
+    
+    // Track conversion before redirecting
+    trackContactFormSubmit({
+      name,
+      mobile,
+      formLocation: 'quick_enquiry'
+    });
+    
+    // Small delay to ensure tracking fires
+    setTimeout(() => {
+      const message = `Hi, I'm ${name}. I need a free quote for pigeon or balcony safety net installation in Hyderabad. My number is ${mobile}.`;
+      window.open(
+        `https://wa.me/919100579116?text=${encodeURIComponent(message)}`,
+        "_blank"
+      );
+    }, 300);
   };
 
   return (
     <section className="bg-secondary py-6">
       <div className="container">
         <h2 className="text-2xl md:text-3xl font-bold font-heading text-secondary-foreground text-center mb-4">
-          Send Quick Enquiry
+          Get Free Quote for Pigeon & Balcony Nets
         </h2>
+        <p className="text-center text-secondary-foreground/90 mb-4 max-w-2xl mx-auto">
+          Starting From Rs.10 / Sq Ft | Free Site Visit | Free Measurement Anywhere in Hyderabad
+        </p>
         <form
           onSubmit={handleSubmit}
           className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-2xl mx-auto"
@@ -34,7 +49,7 @@ const EnquiryForm = () => {
           />
           <input
             type="tel"
-            placeholder="Mobile"
+            placeholder="Mobile Number"
             value={mobile}
             onChange={(e) => setMobile(e.target.value)}
             required
@@ -45,7 +60,7 @@ const EnquiryForm = () => {
             className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
           >
             <Send className="w-4 h-4" />
-            Submit
+            Get Free Quote
           </button>
         </form>
       </div>

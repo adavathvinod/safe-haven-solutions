@@ -3,23 +3,23 @@ import { Wrench, Award, DollarSign, Heart } from "lucide-react";
 const reasons = [
   {
     icon: Wrench,
-    title: "Free Installation",
-    desc: "We provide complete installation. No additional charges for any type of demand.",
+    title: "Best Quality Nylon Nets",
+    desc: "Strong, weather-resistant pigeon and balcony safety nets installed for long-term protection.",
   },
   {
     icon: Award,
-    title: "Quality Assurance",
-    desc: "Highest calibre products. We are wholesalers providing the lowest prices.",
+    title: "Professional Installation",
+    desc: "Experienced technicians deliver clean fitting, secure anchors, and reliable finishing on every job.",
   },
   {
     icon: DollarSign,
-    title: "Save Maintenance Cost",
-    desc: "Zero maintenance cost. Contact us for any cuts or damage repairs.",
+    title: "Affordable Price",
+    desc: "Transparent quotes, starting from Rs.10 / Sq Ft, with a free site visit and free measurement.",
   },
   {
     icon: Heart,
-    title: "Trusted By Customers",
-    desc: "We focus on unique client needs. Quality standards keep us in business for years.",
+    title: "Fast Service in Hyderabad",
+    desc: "Quick response for homes, apartments, and buildings with same day service when slots are available.",
   },
 ];
 
@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
     <section className="py-16 bg-primary">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center text-primary-foreground mb-10">
-          Why Choose Us
+          Why Choose GDR Enterprises
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((item) => (

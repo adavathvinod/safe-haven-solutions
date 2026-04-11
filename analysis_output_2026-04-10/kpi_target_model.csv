@@ -1,0 +1,2 @@
+target_daily_budget_inr,required_calls_per_day,assumed_call_conversion_rate,required_clicks_per_day,assumed_avg_cpc_inr,estimated_spend_for_required_clicks,note
+1000,4.5,0.15,30.0,25,750.0,"To hit 4-5 calls/day on 1000 INR, CPC should be ~20-30 and landing/call flow must convert 13-18% of clicks"

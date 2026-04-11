@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import { trackContactFormSubmit, trackCallClick } from "@/lib/gtmTracking";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -13,11 +14,23 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMsg = `Hi, I'm ${name}. I'd like to enquire about ${service || "your safety net services"}. ${message} My number is ${mobile}.`;
-    window.open(
-      `https://wa.me/919100579116?text=${encodeURIComponent(whatsappMsg)}`,
-      "_blank"
-    );
+    
+    // Track conversion before redirecting
+    trackContactFormSubmit({
+      name,
+      mobile,
+      service,
+      formLocation: 'contact_page'
+    });
+    
+    // Small delay to ensure tracking fires
+    setTimeout(() => {
+      const whatsappMsg = `Hi, I'm ${name}. I'd like to enquire about ${service || "your safety net services"}. ${message} My number is ${mobile}.`;
+      window.open(
+        `https://wa.me/919100579116?text=${encodeURIComponent(whatsappMsg)}`,
+        "_blank"
+      );
+    }, 300);
   };
 
   return (
@@ -105,9 +118,21 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Phone</h3>
-                    <a href="tel:9100579116" className="text-muted-foreground hover:text-secondary">+91 9100579116</a>
+                    <a 
+                      href="tel:9100579116" 
+                      className="text-muted-foreground hover:text-secondary"
+                      onClick={() => trackCallClick('9100579116', 'contact_page')}
+                    >
+                      +91 9100579116
+                    </a>
                     <br />
-                    <a href="tel:8317579116" className="text-muted-foreground hover:text-secondary">+91 8317579116</a>
+                    <a 
+                      href="tel:8317579116" 
+                      className="text-muted-foreground hover:text-secondary"
+                      onClick={() => trackCallClick('8317579116', 'contact_page')}
+                    >
+                      +91 8317579116
+                    </a>
                   </div>
                 </div>
 

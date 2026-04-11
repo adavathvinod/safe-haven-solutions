@@ -82,10 +82,10 @@ const Header = () => {
         <div className="flex items-center gap-3">
           <a
             href="tel:9100579116"
-            className="hidden md:flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
+            className="hidden md:flex flex-row-reverse items-center gap-2 bg-secondary text-secondary-foreground px-5 py-3 rounded-full text-base font-bold hover:opacity-90 transition-opacity"
           >
-            <Phone className="w-4 h-4" />
-            9100579116
+            <Phone className="w-5 h-5" />
+            Call Now - Free Site Visit
           </a>
           <button
             className="lg:hidden p-2 text-primary"
